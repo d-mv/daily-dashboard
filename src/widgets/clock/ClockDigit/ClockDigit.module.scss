@@ -1,0 +1,13 @@
+.container {
+	height: fit-content;
+	display: flex;
+	padding: var(--clock-digit-padding);
+	font-family: 'Major Mono Display', monospace;
+
+	p {
+		font-size: var(--clock-digit-size);
+		display: flex;
+		height: fit-content;
+		transition: var(--transition);
+	}
+}

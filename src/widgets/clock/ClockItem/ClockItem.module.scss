@@ -1,0 +1,9 @@
+.container {
+	height: fit-content;
+	display: flex;
+	flex-flow: row nowrap;
+	margin: var(--clock-item-margin);
+	*+* {
+		margin-inline-start: var(--clock-item-distance)
+	}
+}
