@@ -2,14 +2,14 @@ import { Optional } from '@mv-d/toolbelt';
 import { clsx } from 'clsx';
 import { useEffect, useState } from 'react';
 
-import { Icon } from '../../../shared';
+import { ScaleContainer, WithTooltip } from '../../../shared';
 import { ClockItem } from '../ClockItem';
 import classes from './Clock.module.scss';
 
 export function Clock() {
   const [time, setTime] = useState<Optional<Date>>();
 
-  const [minimized, setMinimized] = useState(false);
+  const [isVertical, setIsVertical] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,20 +19,30 @@ export function Clock() {
     return () => clearInterval(interval);
   }, []);
 
-  function handleScaleDown() {
-    setMinimized(state => !state);
+  function toggleVertical() {
+    setIsVertical(state => !state);
+  }
+
+  function chooseTooltip() {
+    if (isVertical) return 'Toggle horizontal';
+    else return 'Toggle vertical';
   }
 
   return (
-    <div className={clsx(classes.container, { [classes.minimized]: minimized })}>
-      <ClockItem digits={String(time?.getHours() || 0)} />
-      <div className={classes.separator} />
-      <ClockItem digits={String(time?.getMinutes() || 0)} />
-      <div className={classes.separator} />
-      <ClockItem digits={String(time?.getSeconds() || 0)} />
-      <button className={classes.button} onClick={handleScaleDown}>
-        <Icon icon={minimized ? 'maximize' : 'minimize'} className={classes.icon} />
-      </button>
-    </div>
+    <ScaleContainer
+      id='clock'
+      classMax={classes.maximized}
+      classMin={clsx(classes.minimized, { [classes['vertical-container']]: isVertical })}
+    >
+      <WithTooltip tooltip={chooseTooltip()}>
+        <button onClick={toggleVertical} className={clsx(classes.button, { [classes.vertical]: isVertical })}>
+          <ClockItem digits={String(time?.getHours() || 0)} />
+          <div className={classes.separator} />
+          <ClockItem digits={String(time?.getMinutes() || 0)} />
+          <div className={classes.separator} />
+          <ClockItem digits={String(time?.getSeconds() || 0)} />
+        </button>
+      </WithTooltip>
+    </ScaleContainer>
   );
 }

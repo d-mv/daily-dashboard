@@ -1,0 +1,18 @@
+.container {
+	color: #c1c1c1;
+	padding: 1rem;
+	padding-top: 2rem;
+	width: 100%;
+}
+
+.tasks {
+	padding: 1rem 0;
+}
+
+.maximized {
+	@extend .container;
+}
+
+.minimized {
+	@extend .container;
+}

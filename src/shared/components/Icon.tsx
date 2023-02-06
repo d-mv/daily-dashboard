@@ -1,11 +1,19 @@
 import { CSSProperties, PropsWithoutRef } from 'react';
 import { BsBoxArrowInDownLeft, BsBoxArrowInUpRight } from 'react-icons/bs';
+import { BiCheckbox, BiCheckboxChecked, BiCheckboxMinus, BiCheckboxSquare } from 'react-icons/bi';
+import { RxDoubleArrowUp, RxArrowDown } from 'react-icons/rx';
 import { makeMatch } from '@mv-d/toolbelt';
 
 export const Icons = makeMatch(
   {
     minimize: BsBoxArrowInDownLeft,
     maximize: BsBoxArrowInUpRight,
+    checked: BiCheckboxChecked,
+    semiChecked: BiCheckboxMinus,
+    fullChecked: BiCheckboxSquare,
+    unchecked: BiCheckbox,
+    high: RxDoubleArrowUp,
+    low: RxArrowDown,
   },
   () => <div />,
 );

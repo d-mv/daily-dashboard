@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	align-items: flex-start;
+	height: 100%;
+}
+
+.aside {
+	position: relative;
+	width: fit-content;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 1vw
+}
+
+.main {
+	position: relative;
+	width: fit-content;
+	height: 100%;
+	flex: 1
+}

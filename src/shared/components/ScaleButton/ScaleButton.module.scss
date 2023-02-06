@@ -1,0 +1,25 @@
+.container {
+	display: none;
+	position: absolute;
+	padding: 1%;
+	top: var(--clock-button-offset);
+	right: var(--clock-button-offset);
+	cursor: pointer;
+	transition: var(--transition);
+
+	&:active {
+		transform: scale(0.9);
+	}
+}
+
+.icon {
+	fill: var(--color-primary-1);
+	height: var(--clock-button-size);
+	width: var(--clock-button-size);
+	transition: var(--transition);
+
+	&:hover {
+		fill: var(--color-primary-3)
+	}
+}
+

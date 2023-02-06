@@ -1,0 +1,55 @@
+.container {
+	display: flex;
+	flex-flow: column;
+	padding: 1rem;
+	width: 100%;
+	transition: var(--transition);
+
+	&:hover {
+		background-color: var(--color-accent-1);
+		color: #1b1919
+	}
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-icon {
+	height: 2rem;
+	width: 2rem;
+	stroke-width: .001rem;
+}
+
+.priority {
+	display: flex;
+	align-items: center;
+	padding: 0 1rem
+}
+
+.priority-icon {
+	height: 2rem;
+	width: 2rem;
+	stroke-width: .001rem;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	padding-block-end: .5rem;
+}
+
+.status {
+	font-size: 1.4rem;
+	font-weight: 300;
+	user-select: none;;
+}
+
+.title {
+	font-weight: 300;
+}
+
+.note {
+	font-size: 1.6rem;
+}
