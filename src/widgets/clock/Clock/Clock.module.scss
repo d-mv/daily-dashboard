@@ -10,28 +10,20 @@
 
 }
 
-.separator {
-	display: var(--clock-separator-display);
-
-	&::after {
-		color: var(--color);
-		height: calc(var(--clock-digit-size) / 2);
-		font-family: 'Major Mono Display',
-			monospace;
-		;
-		content: ':';
-	}
-}
-
 .container {
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
 	align-items: center;
+
+
 }
 
 .vertical-container {
 	width: 4vw;
+	.separator::after {
+		content: '-' !important;
+	}
 }
 
 .maximized {
@@ -42,7 +34,7 @@
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background-color: #1b1919;
+	background-color: var(--background-color);
 	--font-size-title: 15vw;
 	--clock-digit-padding: 0 1rem;
 	--clock-item-margin: 0 1rem;
@@ -64,4 +56,18 @@
 	--clock-button-offset-top: -0.3vw;
 	--clock-button-offset-right: -1.3vw;
 	--clock-button-size: 1rem;
+
+	.separator::after {
+		color: #c1c1c1;
+		font-size: calc(1.5vw / 1.5);
+		height: 100%;
+		font-family: 'Major Mono Display', monospace;
+		content: ':';
+	}
+}
+
+.separator {
+	display: var(--clock-separator-display);
+
+
 }

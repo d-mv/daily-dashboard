@@ -1,4 +1,5 @@
 import { ifTrue, makeMatch } from '@mv-d/toolbelt';
+import { clsx } from 'clsx';
 
 import { Icon } from '../../../shared';
 import { TaskItem } from '../tasks.types';
@@ -14,12 +15,17 @@ const MATCH_PRIORITY_ICON = makeMatch({ low: 'low', high: 'high' }, 'medium');
 
 export function Task({ task }: TaskProps) {
   return (
-    <div className={classes.container}>
+    <div
+      className={clsx(classes.container, {
+        [classes.completed]: task.status === 'completed',
+        [classes['in-progress']]: task.status === 'in-progress',
+      })}
+    >
       <div className={classes.row}>
-        <h5 className={classes.title}>{task.title}</h5>
-        <div className={classes.priority}>
+        <h1 className={classes.title}>{task.title}</h1>
+        {/* <div className={classes.priority}>
           <Icon icon={MATCH_PRIORITY_ICON[task.priority]} className={classes['priority-icon']} />
-        </div>
+        </div> */}
         <p className={classes.status}>{task.status}</p>
       </div>
       {ifTrue(task.note, () => (

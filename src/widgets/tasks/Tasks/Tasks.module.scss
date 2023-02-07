@@ -9,16 +9,16 @@
 
 .maximized {
 	@extend .container;
-	--font-size-title: 15vw;
+	--font-size-title: 2vw;
 	--tasks-button-offset-top: .3rem;
 	--tasks-button-offset-right: .3rem;
-	--tasks-button-size: 1.5vw;
+	--tasks-button-size: 2vw;
 }
 
 .minimized {
 	@extend .container;
 	--font-size-title: 1.5vw;
-	--tasks-button-offset-top: -.3vw;
-	--tasks-button-offset-right: calc(100% - 7.3vw);
+	--tasks-button-offset-top: -.5vw;
+	--tasks-button-offset-right: calc(100% - 8vw);
 	--tasks-button-size: 1rem;
 }

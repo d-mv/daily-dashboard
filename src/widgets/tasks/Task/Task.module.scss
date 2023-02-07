@@ -4,10 +4,11 @@
 	padding: 1rem;
 	width: 100%;
 	transition: var(--transition);
+	font-family: 'Noto Sans', sans-serif;
 
 	&:hover {
 		background-color: var(--color-accent-1);
-		color: #1b1919
+		color: var(--background-color);
 	}
 }
 
@@ -41,15 +42,28 @@
 }
 
 .status {
-	font-size: 1.4rem;
-	font-weight: 300;
-	user-select: none;;
+	font-size: 1vw;
+	font-weight: 200;
+	font-style: italic;
+	user-select: none;
+	padding: 0 2rem;
+
 }
 
 .title {
 	font-weight: 300;
+	font-size: 1.5vw;
 }
 
 .note {
-	font-size: 1.6rem;
+	font-size: 1.2vw;
+}
+
+.completed {
+	text-decoration: line-through;
+	color: grey;
+}
+
+.in-progress {
+	color: var(--color-accent-1);
 }

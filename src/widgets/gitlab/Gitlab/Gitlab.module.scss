@@ -1,0 +1,20 @@
+.container {
+	color: #c1c1c1;
+	width: 100%;
+}
+
+.maximized {
+	@extend .container;
+	--font-size-title: 2vw;
+	--gitlab-button-offset-top: .3rem;
+	--gitlab-button-offset-right: .3rem;
+	--gitlab-button-size: 2vw;
+}
+
+.minimized {
+	@extend .container;
+	--font-size-title: 1.5vw;
+	--gitlab-button-offset-top: -.5vw;
+	--gitlab-button-offset-right: calc(100% - 9vw);
+	--gitlab-button-size: 1rem;
+}
