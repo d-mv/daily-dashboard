@@ -6,10 +6,10 @@
 
 
 	p {
-		font-size: var(--clock-digit-size);
+		font-size: var(--font-size-title);
 		display: flex;
 		height: fit-content;
 		transition: var(--transition);
-		color: #c1c1c1;
+		color: var(--color);
 	}
 }

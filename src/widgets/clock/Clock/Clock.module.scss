@@ -2,6 +2,7 @@
 	display: flex;
 	flex-flow: row;
 	cursor: pointer;
+	align-items: center;
 }
 
 .vertical {
@@ -13,7 +14,7 @@
 	display: var(--clock-separator-display);
 
 	&::after {
-		color: var(--clock-color);
+		color: var(--color);
 		height: calc(var(--clock-digit-size) / 2);
 		font-family: 'Major Mono Display',
 			monospace;
@@ -27,16 +28,10 @@
 	flex-flow: row;
 	justify-content: center;
 	align-items: center;
-	transition: var(--transition);
-
-	&:hover [id=scale-button] {
-		display: block;
-	}
 }
 
 .vertical-container {
-	width: 6rem !important;
-	height: 11rem !important;
+	width: 4vw;
 }
 
 .maximized {
@@ -48,25 +43,25 @@
 	right: 0;
 	z-index: 1000;
 	background-color: #1b1919;
-	--clock-digit-size: 15vw;
+	--font-size-title: 15vw;
 	--clock-digit-padding: 0 1rem;
 	--clock-item-margin: 0 1rem;
 	--clock-item-distance: 1rem;
 	--clock-separator-display: none;
-	--clock-button-offset: .3rem;
+	--clock-button-offset-top: .3rem;
+	--clock-button-offset-right: .3rem;
 	--clock-button-size: 1.5vw;
 }
 
 .minimized {
 	@extend .container;
-	width: 14rem;
-	height: 7rem;
 	z-index: 1;
-	--clock-digit-size: 2rem;
+	--font-size-title: 1.5vw;
 	--clock-digit-padding: 0;
 	--clock-item-margin: 0 .3rem;
 	--clock-item-distance: .3rem;
 	--clock-separator-display: flex;
-	--clock-button-offset: .3rem;
+	--clock-button-offset-top: -0.3vw;
+	--clock-button-offset-right: -1.3vw;
 	--clock-button-size: 1rem;
 }

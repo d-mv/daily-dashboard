@@ -1,1 +1,8 @@
+.container {
+	transition: var(--transition);
+	position: relative;
 
+	&:hover [id=scale-button] {
+		display: block;
+	}
+}

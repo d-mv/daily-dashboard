@@ -1,3 +1,9 @@
+:root {
+	--background-color: #1b1919;
+	--background-color-lighter: #312e2e;
+	--color: #c1c1c1;
+}
+
 .container {
 	display: flex;
 	align-items: flex-start;
@@ -12,12 +18,13 @@
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0 1vw
+	padding: 1vw;
 }
 
 .main {
 	position: relative;
 	width: fit-content;
 	height: 100%;
-	flex: 1
+	flex: 1;
+	padding: 1vw;
 }

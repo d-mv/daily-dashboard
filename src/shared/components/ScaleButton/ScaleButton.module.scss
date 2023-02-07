@@ -1,9 +1,7 @@
 .container {
 	display: none;
 	position: absolute;
-	padding: 1%;
-	top: var(--clock-button-offset);
-	right: var(--clock-button-offset);
+	padding: .3vw;
 	cursor: pointer;
 	transition: var(--transition);
 
@@ -14,8 +12,6 @@
 
 .icon {
 	fill: var(--color-primary-1);
-	height: var(--clock-button-size);
-	width: var(--clock-button-size);
 	transition: var(--transition);
 
 	&:hover {

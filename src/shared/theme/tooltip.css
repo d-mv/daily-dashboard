@@ -1,7 +1,7 @@
 .tooltip-container {
-  --tooltipBackground: var(--color-white);
-  --tooltipBorder: var(--color-primary-4);
-  --tooltipColor: var(--color-text);
+  --tooltipBackground: var(--background-color-lighter);
+  --tooltipBorder: var(--background-color-lighter);
+  --tooltipColor: var(--color);
 
   background-color: var(--tooltipBackground);
   border-radius: .8rem;
@@ -117,4 +117,7 @@
 
 .tooltip-content {
   padding: .4rem;
+  font-family: Gruppo;
+  font-size: 1vw;
+  font-weight: 300;
 }

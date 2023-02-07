@@ -53,7 +53,7 @@ export function ScaleContainer({
         <Title>{title}</Title>
       ))}
       {children}
-      <ScaleButton isMinimized={minimized[id]} onClick={toggleScale} />
+      <ScaleButton id={id} isMinimized={minimized[id]} onClick={toggleScale} />
     </div>
   );
 }

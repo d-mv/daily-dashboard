@@ -1,7 +1,5 @@
 .container {
 	color: #c1c1c1;
-	padding: 1rem;
-	padding-top: 2rem;
 	width: 100%;
 }
 
@@ -11,8 +9,16 @@
 
 .maximized {
 	@extend .container;
+	--font-size-title: 15vw;
+	--tasks-button-offset-top: .3rem;
+	--tasks-button-offset-right: .3rem;
+	--tasks-button-size: 1.5vw;
 }
 
 .minimized {
 	@extend .container;
+	--font-size-title: 1.5vw;
+	--tasks-button-offset-top: -.3vw;
+	--tasks-button-offset-right: calc(100% - 7.3vw);
+	--tasks-button-size: 1rem;
 }
